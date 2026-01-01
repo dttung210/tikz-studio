@@ -1,0 +1,5 @@
+{
+  "name": "TIKZ STUDIO ",
+  "description": "A comprehensive tool to convert natural language to TikZ, TikZ to SVG, and Images to TikZ code using Gemini AI and MathJax.",
+  "requestFramePermissions": []
+}

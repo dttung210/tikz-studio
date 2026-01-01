@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TikZ Master Pro - Vibrant Teal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+      
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+
+      .svg-container svg {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+      }
+
+      ::-webkit-scrollbar { width: 10px; }
+      ::-webkit-scrollbar-track { background: #f0fdf4; }
+      ::-webkit-scrollbar-thumb { 
+        background: #0d9488; 
+        border-radius: 10px; 
+        border: 3px solid #f0fdf4;
+      }
+      ::-webkit-scrollbar-thumb:hover { background: #0f766e; }
+
+      .vibrant-bg {
+        background: linear-gradient(-45deg, #ccfbf1, #f1f5f9, #99f6e4, #f8fafc);
+        background-size: 400% 400%;
+        animation: meshGradient 12s ease infinite;
+      }
+
+      @keyframes meshGradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+
+      .input-shadow {
+        box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+      }
+
+      .panel-card {
+        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      .panel-card:hover {
+        transform: translateY(-4px);
+      }
+    </style>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']],
+          packages: {'[+]': ['base', 'ams', 'noerrors', 'noundefined']}
+        },
+        svg: { fontCache: 'global' },
+        startup: { typeset: false }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "path": "https://esm.sh/path@^0.12.7",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "url": "https://esm.sh/url@^0.11.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="vibrant-bg text-slate-900 overflow-hidden min-h-screen">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
